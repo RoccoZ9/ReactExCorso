@@ -5,15 +5,15 @@ import './App.css';
 class App extends Component {
 
   constructor() {
-   super();
+    super();
 
-   this.state = {
-     name : {firstName : 'Rocco', lastName : 'Zagà'},
-     company : 'Vidyasot'
-   }
+    this.state = {
+      name: { firstName: 'Rocco', lastName: 'Zagà' },
+      company: 'Vidyasot'
+    }
   }
 
-  render () {
+  render() {
     return (
       <div className="App">
         <header className="App-header">
@@ -23,11 +23,17 @@ class App extends Component {
           </p>
           <p>Ciao Fabio!</p>
           <button onClick={() => {
-            this.setState({name : {firstName : 'CarloVitto', lastName: 'VttoCarlo'}})
+            this.setState(() => {
+              return {
+                name: { firstName: 'CarloVitto', lastName: 'VittoCarlo' }
+              };
+            }, () => {
+              console.log(this.state)
+            });
           }}> Change name</button>
-          <button onClick={() => {this.setState({company: 'FinconsCarlo'})}}>Change company </button>
+          <button onClick={() => { this.setState({ company: 'FinconsCarlo' }) }}>Change company </button>
         </header>
-      </div>
+      </div >
     );
   }
 }
