@@ -11,14 +11,7 @@ class App extends Component {
           <p>
             Hello my name is Rocco. Ciao Fabio!
           </p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
+          <button> Change name</button>
         </header>
       </div>
     );
