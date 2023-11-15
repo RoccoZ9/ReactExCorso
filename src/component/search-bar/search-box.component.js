@@ -2,14 +2,14 @@ import React, { Component } from "react";
 import './search-box.css';
 
 
-const SearchBar = () => {
+const SearchBar = ({ className, placeholder, onChangeHandler }) => {
     return (
         <div>
             <input
-                className={`search-box ${this.props.className}`}
+                className={`search-box ${className}`}
                 type='search'
-                placeholder={this.props.placeholder}
-                onChange={this.props.onChangeHandler} />
+                placeholder={placeholder}
+                onChange={onChangeHandler} />
         </div>
     )
 }

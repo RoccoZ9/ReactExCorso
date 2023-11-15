@@ -2,7 +2,10 @@ import React from "react"
 import './card.css';
 
 
-const Card = ({ name, id, email }) => {
+const Card = ({ monster }) => {
+
+    const { name, id, email } = monster;
+
     return (
         <div className='card-container' key={id}>
             <h1>Ciao Fabio</h1>
