@@ -3,25 +3,30 @@ import './App.css';
 import CardList from './component/card-list/card-list.component.js';
 import SearchBar from './component/search-bar/search-box.component.js';
 import React from 'react';
+import { getData } from './util/data.util.js';
 
+
+const URL_LIST = 'https://jsonplaceholder.typicode.com/users';
+
+export interface Monster {
+  id: string;
+  name: string;
+  email: string;
+}
 
 
 const App = () => {
 
   const [searchField, setSearchField] = useState('');
-  const [monsters, setMonsters] = useState([]);
+  const [monsters, setMonsters] = useState<Monster[]>([]);
   const [filteredMonsters, setFilteredMonster] = useState(monsters);
 
-  const getList = () => {
-    fetch('https://jsonplaceholder.typicode.com/users')
-      .then((res) => res.json())
-      .then((users) => {
-        setMonsters(users)
-      });
-  }
   useEffect(() => {
-    getList();
-  }, [])
+    const fetchUser = async () => {
+      const users = await getData<Monster[]>(URL_LIST);
+      setMonsters(users);
+    }
+  }, []);
 
   const onSearchChange = (event) => {
     const searchFieldString = event.target.value.toLowerCase();

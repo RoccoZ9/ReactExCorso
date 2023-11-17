@@ -1,4 +1,4 @@
-import React, { ChangeEventHandler } from "react";
+import React, { ChangeEvent } from "react";
 import './search-box.css';
 
 export interface SearchBarProps extends ChangeHanlerProps {
@@ -8,7 +8,7 @@ export interface SearchBarProps extends ChangeHanlerProps {
 
 
 export interface ChangeHanlerProps {
-    onChangeHandler: ChangeEventHandler<HTMLInputElement>
+    onChangeHandler: (e: ChangeEvent<HTMLInputElement>) => void
 }
 
 
