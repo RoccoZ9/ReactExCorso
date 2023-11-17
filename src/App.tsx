@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react';
+import { useEffect, useState, ChangeEvent } from 'react';
 import './App.css';
 import CardList from './component/card-list/card-list.component.js';
 import SearchBar from './component/search-bar/search-box.component.js';
@@ -25,10 +25,11 @@ const App = () => {
     const fetchUser = async () => {
       const users = await getData<Monster[]>(URL_LIST);
       setMonsters(users);
-    }
+    };
+    fetchUser()
   }, []);
 
-  const onSearchChange = (event) => {
+  const onSearchChange = (event: ChangeEvent<HTMLInputElement>): void => {
     const searchFieldString = event.target.value.toLowerCase();
     setSearchField(searchFieldString);
   };
