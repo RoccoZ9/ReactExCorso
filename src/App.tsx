@@ -2,6 +2,7 @@ import { useEffect, useState } from 'react';
 import './App.css';
 import CardList from './component/card-list/card-list.component.js';
 import SearchBar from './component/search-bar/search-box.component.js';
+import React from 'react';
 
 
 
@@ -42,7 +43,7 @@ const App = () => {
       <SearchBar
         className='search-box'
         onChangeHandler={onSearchChange}
-        placeholders='search monsters' />
+        placeholder='search monsters' />
       <CardList monsters={filteredMonsters} />
     </div>
   )
