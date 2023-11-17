@@ -4,15 +4,10 @@ import CardList from './component/card-list/card-list.component.tsx';
 import SearchBar from './component/search-bar/search-box.component.tsx';
 import React from 'react';
 import { getData } from './util/data.util.ts';
-
+import { Monster } from './util/myInterface.ts';
 
 const URL_LIST = 'https://jsonplaceholder.typicode.com/users';
 
-export interface Monster {
-  id: string;
-  name: string;
-  email: string;
-}
 
 
 const App = () => {

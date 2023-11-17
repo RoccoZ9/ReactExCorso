@@ -1,10 +1,6 @@
 import React from "react"
 import './card.css';
-import { Monster } from "../../App";
-
-export interface CardProps {
-    monster: Monster
-}
+import { CardProps } from "../../util/myInterface";
 
 
 const Card = ({ monster: { id, name, email } }: CardProps) => {
