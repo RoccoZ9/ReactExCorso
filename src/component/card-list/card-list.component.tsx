@@ -1,7 +1,7 @@
-import React, { Component } from 'react';
+import React from 'react';
 import './card-list.css';
-import Card from '../card/card.component.js';
-import { Monster } from '../../App.js';
+import Card from '../card/card.component.tsx';
+import { Monster } from '../../App.tsx';
 
 export interface CardListProps {
     monsters: Monster[];

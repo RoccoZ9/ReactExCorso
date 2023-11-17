@@ -1,9 +1,9 @@
 import { useEffect, useState, ChangeEvent } from 'react';
 import './App.css';
-import CardList from './component/card-list/card-list.component.js';
-import SearchBar from './component/search-bar/search-box.component.js';
+import CardList from './component/card-list/card-list.component.tsx';
+import SearchBar from './component/search-bar/search-box.component.tsx';
 import React from 'react';
-import { getData } from './util/data.util.js';
+import { getData } from './util/data.util.ts';
 
 
 const URL_LIST = 'https://jsonplaceholder.typicode.com/users';
